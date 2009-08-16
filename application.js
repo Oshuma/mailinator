@@ -20,7 +20,7 @@ $(document).ready(function() {
     return false;
   });
 
-  $('#example-form').click(function() {
+  $('#example-form button[type="reset"]').click(function() {
     $('#example-output').slideUp(function() {
       $('#example').css('border-bottom', '3px solid #039')
                    .css('-moz-border-radius-bottomright', '10px')

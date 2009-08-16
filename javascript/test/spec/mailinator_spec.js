@@ -45,7 +45,7 @@ Screw.Unit(function() {
       expect('pending').to(equal, true);
     });
 
-    it('should fetch a random primary address', function() {
+    it('should fetch a random primary email address', function() {
       expect('pending').to(equal, true);
     });
 

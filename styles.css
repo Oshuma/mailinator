@@ -69,7 +69,9 @@ a:hover {
 }
 
 .download-icons {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .download-icons a {
@@ -93,6 +95,9 @@ hr {
 }
 
 .footer {
+  position: fixed;
+  bottom: 5px;
+  right: 10px;
   font-style: italic;
   padding-top: 30px;
   text-align: center;
@@ -129,10 +134,12 @@ hr {
 
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+
   -moz-border-radius-topleft: 0;
   -moz-border-radius-topright: 0;
-  -webkit-border-radius-topleft: 0;
-  -webkit-border-radius-topright: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+
   border: 3px solid #039;
   border-top: none;
   font-size: 2em;
@@ -143,20 +150,20 @@ hr {
 
 #download-tab {
   position: absolute;
-  bottom: 0;
-  left: 40%;
+  top: 0;
+  left: 30px;
 
   -moz-border-radius: 10px;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
   -webkit-border-radius: 10px;
-  -webkit-border-radius-bottomleft: 0;
-  -webkit-border-radius-bottomright: 0;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
 
   background-color: #9cf;
   border: 3px solid #039;
-  border-bottom: none;
-  font-size: 1.8em;
+  border-top: none;
+  font-size: 1.5em;
   font-style: normal;
   padding: 5px;
 }
@@ -166,4 +173,22 @@ hr {
 
 #download {
   display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  border: 3px solid #039;
+  border-top: none;
+  border-right: none;
+  -moz-border-radius-bottomleft: 10px;
+
+  background-color: #fff;
+  padding: 10px;
+  z-index: 100;
+
+}
+
+#download h2 {
+  margin: 10px auto;
 }

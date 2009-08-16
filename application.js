@@ -1,3 +1,8 @@
+jQuery.fn.slideToggle = function() {
+  if (this.css('display') == 'none') this.slideDown();
+  else this.slideUp();
+}
+
 $(document).ready(function() {
   var exampleName = $('#example-name').val();
 
@@ -9,8 +14,8 @@ $(document).ready(function() {
     $('#example').css('border-bottom', 'none')
                  .css('-moz-border-radius-bottomright', '0')
                  .css('-moz-border-radius-bottomleft', '0')
-                 .css('-webkit-border-radius-bottomright', '0')
-                 .css('-webkit-border-radius-bottomleft', '0');
+                 .css('-webkit-border-bottom-right-radius', '0')
+                 .css('-webkit-border-bottom-left-radius', '0');
     $('#example-output').slideDown();
     return false;
   });
@@ -20,11 +25,12 @@ $(document).ready(function() {
       $('#example').css('border-bottom', '3px solid #039')
                    .css('-moz-border-radius-bottomright', '10px')
                    .css('-moz-border-radius-bottomleft', '10px')
-                   .css('-webkit-border-radius-bottomright', '10px')
-                   .css('-webkit-border-radius-bottomleft', '10px');
+                   .css('-webkit-border-bottom-right-radius', '10px')
+                   .css('-webkit-border-bottom-left-radius', '10px');
     });
   });
 
-  $('#download-tab').click(function() {
+  $('.toggle-download').click(function() {
+    $('#download').slideToggle();
   });
 }); // $(document).ready()

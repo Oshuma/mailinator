@@ -11,14 +11,22 @@ class Mailinator
   end
 
   def inbox_url
-    URI.parse("#{BASE_URL}/maildir.jsp?email=#{@primary}").to_s
+    action_url('maildir')
   end
 
   def rss_url
-    URI.parse("#{BASE_URL}/rss.jsp?email=#{@primary}").to_s
+    action_url('rss')
+  end
+
+  def widget_url(width = '250', height = '250')
+    URI.parse("#{BASE_URL}/widget/mailin8r.jsp?w=#{width}&h=#{height}&b=#{@primary}").to_s
   end
 
   private
+
+  def action_url(action)
+    URI.parse("#{BASE_URL}/#{action}.jsp?email=#{@primary}").to_s
+  end
 
   def format_email(email)
     email =~ /^[a-zA-Z0-9]+@mailinator.com$/ ? email : "#{email}@mailinator.com"

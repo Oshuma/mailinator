@@ -4,21 +4,26 @@ describe Mailinator do
   before(:each) do
     @random_name = "awesomemail#{rand(420)}"
     @primary_email = "#{@random_name}@mailinator.com"
+    @mail = Mailinator.new(@random_name)
   end
 
   it 'should have a primary email address' do
-    @mail = Mailinator.new(@random_name)
     @mail.email.should == @primary_email
   end
 
   it 'should have an inbox URL' do
-    @mail = Mailinator.new(@random_name)
     @mail.inbox_url.should == "http://mailinator.com/maildir.jsp?email=#{@random_name}"
   end
 
   it 'should have an RSS URL' do
-    @mail = Mailinator.new(@random_name)
     @mail.rss_url.should == "http://mailinator.com/rss.jsp?email=#{@random_name}"
+  end
+
+  it 'should have a widget URL' do
+    width  = '500'
+    height = '250'
+    widget_url = "http://mailinator.com/widget/mailin8r.jsp?w=#{width}&h=#{height}&b=#{@random_name}"
+    @mail.widget_url(width, height).should == widget_url
   end
 
   it 'should have an alternate email address'

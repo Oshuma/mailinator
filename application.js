@@ -14,4 +14,17 @@ $(document).ready(function() {
     $('#example-output').slideDown();
     return false;
   });
+
+  $('#example-form').click(function() {
+    $('#example-output').slideUp(function() {
+      $('#example').css('border-bottom', '3px solid #039')
+                   .css('-moz-border-radius-bottomright', '10px')
+                   .css('-moz-border-radius-bottomleft', '10px')
+                   .css('-webkit-border-radius-bottomright', '10px')
+                   .css('-webkit-border-radius-bottomleft', '10px');
+    });
+  });
+
+  $('#download-tab').click(function() {
+  });
 }); // $(document).ready()

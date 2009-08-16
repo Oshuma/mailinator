@@ -172,7 +172,7 @@ hr {
 }
 
 #download {
-  display: none;
+  /* display: none; */
 
   position: fixed;
   top: 0;
@@ -182,6 +182,7 @@ hr {
   border-top: none;
   border-right: none;
   -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
 
   background-color: #fff;
   padding: 10px;

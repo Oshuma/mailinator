@@ -103,6 +103,56 @@ hr {
   text-align: center;
 }
 
+#download-tab {
+  position: absolute;
+  top: 0;
+  left: 30px;
+
+  -moz-border-radius: 10px;
+  -moz-border-radius-topleft: 0;
+  -moz-border-radius-topright: 0;
+  -webkit-border-radius: 10px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+
+  background-color: #9cf;
+  border: 3px solid #039;
+  border-top: none;
+  font-size: 1.5em;
+  font-style: normal;
+  padding: 5px;
+}
+
+#download-tab:hover {
+}
+
+#download {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  border: 3px solid #039;
+  border-top: none;
+  border-right: none;
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+
+  background-color: #fff;
+  padding: 10px;
+  z-index: 100;
+
+}
+
+#download h2 {
+  margin: 10px auto;
+}
+
+#download a {
+  font-style: normal;
+}
+
 #example {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -142,54 +192,7 @@ hr {
 
   border: 3px solid #039;
   border-top: none;
-  font-size: 2em;
   margin: 0 auto;
   padding: 0.5em;
   text-align: center;
-}
-
-#download-tab {
-  position: absolute;
-  top: 0;
-  left: 30px;
-
-  -moz-border-radius: 10px;
-  -moz-border-radius-topleft: 0;
-  -moz-border-radius-topright: 0;
-  -webkit-border-radius: 10px;
-  -webkit-border-top-left-radius: 0;
-  -webkit-border-top-right-radius: 0;
-
-  background-color: #9cf;
-  border: 3px solid #039;
-  border-top: none;
-  font-size: 1.5em;
-  font-style: normal;
-  padding: 5px;
-}
-
-#download-tab:hover {
-}
-
-#download {
-  /* display: none; */
-
-  position: fixed;
-  top: 0;
-  right: 0;
-
-  border: 3px solid #039;
-  border-top: none;
-  border-right: none;
-  -moz-border-radius-bottomleft: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-
-  background-color: #fff;
-  padding: 10px;
-  z-index: 100;
-
-}
-
-#download h2 {
-  margin: 10px auto;
 }
